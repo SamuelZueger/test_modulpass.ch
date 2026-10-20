@@ -1,0 +1,21 @@
+{
+  "digitalProductPassportId": "https://modulpass.ch/dpp/3b1d9vnabe",
+  "uniqueProductIdentifier": "https://modulpass.ch/id/3b1d9vnabe",
+  "granularity": "Item",
+  "dppSchemaVersion": "EN18223:v1.0",
+  "dppStatus": "Active",
+  "lastUpdated": "2026-10-20T16:01:24Z",
+  "economicOperatorId": "platzhalter:wirtschaftsteilnehmer",
+  "testData": true,
+  "productName": [
+    {
+      "value": "Testbestandteil A1 (Wandelement)",
+      "language": "de-CH"
+    }
+  ],
+  "dimensions": {
+    "length": 6000,
+    "width": 200,
+    "height": 3000
+  }
+}

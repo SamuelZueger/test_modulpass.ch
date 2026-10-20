@@ -1,0 +1,99 @@
+{
+  "digitalProductPassportId": "https://modulpass.ch/dpp/z2fvfvqzdj",
+  "uniqueProductIdentifier": "https://modulpass.ch/id/z2fvfvqzdj",
+  "granularity": "Item",
+  "dppSchemaVersion": "EN18223:v1.0",
+  "dppStatus": "Active",
+  "lastUpdated": "2026-10-20T16:01:24Z",
+  "economicOperatorId": "platzhalter:wirtschaftsteilnehmer",
+  "elements": [
+    {
+      "elementId": "testData",
+      "objectType": "SingleValuedDataElement",
+      "dictionaryReference": "https://modulpass.ch/def/testData",
+      "valueDataType": "xsd:boolean",
+      "value": true
+    },
+    {
+      "elementId": "productName",
+      "objectType": "MultiLanguageDataElement",
+      "dictionaryReference": "https://modulpass.ch/def/productName",
+      "value": [
+        {
+          "value": "Testmodul A",
+          "language": "de-CH"
+        },
+        {
+          "value": "Module d'essai A",
+          "language": "fr-CH"
+        }
+      ]
+    },
+    {
+      "elementId": "dimensions",
+      "objectType": "DataElementCollection",
+      "dictionaryReference": "https://modulpass.ch/def/dimensions",
+      "elements": [
+        {
+          "elementId": "length",
+          "objectType": "SingleValuedDataElement",
+          "dictionaryReference": "https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/Length",
+          "valueDataType": "xsd:decimal",
+          "value": 6000
+        },
+        {
+          "elementId": "width",
+          "objectType": "SingleValuedDataElement",
+          "dictionaryReference": "https://modulpass.ch/def/width",
+          "valueDataType": "xsd:decimal",
+          "value": 3000
+        },
+        {
+          "elementId": "height",
+          "objectType": "SingleValuedDataElement",
+          "dictionaryReference": "https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/Height",
+          "valueDataType": "xsd:decimal",
+          "value": 3200
+        }
+      ]
+    },
+    {
+      "elementId": "components",
+      "objectType": "MultiValuedDataElement",
+      "dictionaryReference": "https://modulpass.ch/def/components",
+      "valueDataType": "xsd:anyURI",
+      "elements": [
+        {
+          "elementId": "component1",
+          "objectType": "SingleValuedDataElement",
+          "dictionaryReference": "https://modulpass.ch/def/component",
+          "valueDataType": "xsd:anyURI",
+          "value": "https://modulpass.ch/dpp/3b1d9vnabe"
+        },
+        {
+          "elementId": "component2",
+          "objectType": "SingleValuedDataElement",
+          "dictionaryReference": "https://modulpass.ch/def/component",
+          "valueDataType": "xsd:anyURI",
+          "value": "https://modulpass.ch/dpp/89cc78cgws"
+        }
+      ]
+    },
+    {
+      "elementId": "documents",
+      "objectType": "MultiValuedDataElement",
+      "dictionaryReference": "https://modulpass.ch/def/documents",
+      "elements": [
+        {
+          "elementId": "document1",
+          "objectType": "RelatedResource",
+          "dictionaryReference": "https://modulpass.ch/def/document",
+          "resourceTitle": "Testdokument",
+          "contentType": "text/plain",
+          "url": "https://modulpass.ch/dpp/z2fvfvqzdj/dok/testdokument.txt",
+          "language": "de-CH"
+        }
+      ]
+    }
+  ]
+}

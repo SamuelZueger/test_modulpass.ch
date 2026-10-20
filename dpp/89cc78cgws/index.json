@@ -1,0 +1,21 @@
+{
+  "digitalProductPassportId": "https://modulpass.ch/dpp/89cc78cgws",
+  "uniqueProductIdentifier": "https://modulpass.ch/id/89cc78cgws",
+  "granularity": "Item",
+  "dppSchemaVersion": "EN18223:v1.0",
+  "dppStatus": "Active",
+  "lastUpdated": "2026-10-20T16:01:24Z",
+  "economicOperatorId": "platzhalter:wirtschaftsteilnehmer",
+  "testData": true,
+  "productName": [
+    {
+      "value": "Testbestandteil A2 (Deckenelement)",
+      "language": "de-CH"
+    }
+  ],
+  "dimensions": {
+    "length": 6000,
+    "width": 3000,
+    "height": 240
+  }
+}

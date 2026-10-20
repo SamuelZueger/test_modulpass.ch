@@ -1,0 +1,15 @@
+{
+  "definition": "productName",
+  "dictionaryReference": "https://modulpass.ch/def/productName",
+  "objectType": "MultiLanguageDataElement",
+  "accessLevel": "public",
+  "names": {
+    "de": "Produktbezeichnung",
+    "fr": "Désignation du produit",
+    "en": "Product name"
+  },
+  "description": {
+    "de": "Bezeichnung des Produkts in einer oder mehreren Sprachen."
+  },
+  "ifc": "IfcRoot.Name (Attribut)"
+}

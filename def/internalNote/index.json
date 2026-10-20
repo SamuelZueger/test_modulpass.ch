@@ -1,0 +1,15 @@
+{
+  "definition": "internalNote",
+  "dictionaryReference": "https://modulpass.ch/def/internalNote",
+  "objectType": "SingleValuedDataElement",
+  "valueDataType": "xsd:string",
+  "accessLevel": "restricted",
+  "names": {
+    "de": "Interne Notiz",
+    "fr": "Note interne",
+    "en": "Internal note"
+  },
+  "description": {
+    "de": "Angabe nur für Berechtigte. Beispiel für eine beschränkte Zugriffsstufe."
+  }
+}

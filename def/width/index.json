@@ -1,0 +1,21 @@
+{
+  "definition": "width",
+  "dictionaryReference": "https://modulpass.ch/def/width",
+  "objectType": "SingleValuedDataElement",
+  "valueDataType": "xsd:decimal",
+  "unit": "mm",
+  "accessLevel": "public",
+  "names": {
+    "de": "Breite",
+    "fr": "Largeur",
+    "en": "Width"
+  },
+  "description": {
+    "de": "Äussere Abmessung quer zur Länge, im Grundriss gemessen."
+  },
+  "bsddMatch": {
+    "relation": "closeMatch",
+    "uri": "https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/Width"
+  },
+  "ifc": "Merkmal Width in den Basismengen (Qto) des Elements"
+}

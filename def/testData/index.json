@@ -1,0 +1,15 @@
+{
+  "definition": "testData",
+  "dictionaryReference": "https://modulpass.ch/def/testData",
+  "objectType": "SingleValuedDataElement",
+  "valueDataType": "xsd:boolean",
+  "accessLevel": "public",
+  "names": {
+    "de": "Testdaten",
+    "fr": "Données de test",
+    "en": "Test data"
+  },
+  "description": {
+    "de": "Kennzeichen für erfundene Testdaten. Ist der Wert true, beschreibt der Pass kein reales Objekt."
+  }
+}

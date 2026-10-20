@@ -1,0 +1,15 @@
+{
+  "definition": "document",
+  "dictionaryReference": "https://modulpass.ch/def/document",
+  "objectType": "RelatedResource",
+  "accessLevel": "public",
+  "names": {
+    "de": "Unterlage",
+    "fr": "Document",
+    "en": "Document"
+  },
+  "description": {
+    "de": "Eine Unterlage mit Medientyp und URL."
+  },
+  "ifc": "IfcDocumentReference über IfcRelAssociatesDocument"
+}

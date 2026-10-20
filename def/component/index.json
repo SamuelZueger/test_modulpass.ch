@@ -1,0 +1,16 @@
+{
+  "definition": "component",
+  "dictionaryReference": "https://modulpass.ch/def/component",
+  "objectType": "SingleValuedDataElement",
+  "valueDataType": "xsd:anyURI",
+  "accessLevel": "public",
+  "names": {
+    "de": "Bestandteil",
+    "fr": "Composant",
+    "en": "Component"
+  },
+  "description": {
+    "de": "DPP-ID eines Bestandteils."
+  },
+  "ifc": "Teil in IfcRelAggregates.RelatedObjects"
+}

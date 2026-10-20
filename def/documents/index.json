@@ -1,0 +1,17 @@
+{
+  "definition": "documents",
+  "dictionaryReference": "https://modulpass.ch/def/documents",
+  "objectType": "MultiValuedDataElement",
+  "elements": [
+    "document"
+  ],
+  "accessLevel": "public",
+  "names": {
+    "de": "Unterlagen",
+    "fr": "Documents",
+    "en": "Documents"
+  },
+  "description": {
+    "de": "Beigefügte Unterlagen."
+  }
+}
