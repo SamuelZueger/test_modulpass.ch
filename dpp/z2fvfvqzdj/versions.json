@@ -1,0 +1,88 @@
+{
+  "digitalProductPassportId": "https://modulpass.ch/dpp/z2fvfvqzdj",
+  "uniqueProductIdentifier": "https://modulpass.ch/id/z2fvfvqzdj",
+  "hashAlgorithm": "sha-256",
+  "currentVersion": 1,
+  "versions": [
+    {
+      "versionId": "https://modulpass.ch/dpp/z2fvfvqzdj/v1",
+      "version": 1,
+      "validFrom": "2026-10-20T16:01:24Z",
+      "validUntil": null,
+      "event": "created",
+      "actor": "did:web:modulpass.ch:akteure:t6hwkyhzjv",
+      "reason": "Erste Version des Testpasses, erfundene Daten (Schritt 5)",
+      "changedElements": [
+        {
+          "elementIdPath": "$['digitalProductPassportId']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['uniqueProductIdentifier']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['granularity']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['dppSchemaVersion']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['dppStatus']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['economicOperatorId']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['testData']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['productName']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['dimensions']['length']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['dimensions']['width']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['dimensions']['height']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['components'][0]",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['components'][1]",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['documents'][0]",
+          "change": "added"
+        }
+      ],
+      "representations": [
+        {
+          "representation": "compressed",
+          "href": "v1/index.json",
+          "sha256": "14f61ab873612b8e480c8899fbddb2bef61559f8da6e2ede7a02c6e6e7d5e329"
+        },
+        {
+          "representation": "full",
+          "href": "v1/full.json",
+          "sha256": "78a4a08d2931b646ae75b3c4b9d93c1cfd7545277d0afdb66b000aff6206f4cc"
+        }
+      ],
+      "logEntrySha256": "d0f412715974975cb4eba7930139170ab24cffbe81b4b1449cab5996e4f7e980"
+    }
+  ]
+}

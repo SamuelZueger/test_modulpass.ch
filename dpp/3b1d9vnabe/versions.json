@@ -1,0 +1,76 @@
+{
+  "digitalProductPassportId": "https://modulpass.ch/dpp/3b1d9vnabe",
+  "uniqueProductIdentifier": "https://modulpass.ch/id/3b1d9vnabe",
+  "hashAlgorithm": "sha-256",
+  "currentVersion": 1,
+  "versions": [
+    {
+      "versionId": "https://modulpass.ch/dpp/3b1d9vnabe/v1",
+      "version": 1,
+      "validFrom": "2026-10-20T16:01:24Z",
+      "validUntil": null,
+      "event": "created",
+      "actor": "did:web:modulpass.ch:akteure:t6hwkyhzjv",
+      "reason": "Erste Version des Testpasses, erfundene Daten (Schritt 5)",
+      "changedElements": [
+        {
+          "elementIdPath": "$['digitalProductPassportId']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['uniqueProductIdentifier']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['granularity']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['dppSchemaVersion']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['dppStatus']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['economicOperatorId']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['testData']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['productName']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['dimensions']['length']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['dimensions']['width']",
+          "change": "added"
+        },
+        {
+          "elementIdPath": "$['dimensions']['height']",
+          "change": "added"
+        }
+      ],
+      "representations": [
+        {
+          "representation": "compressed",
+          "href": "v1/index.json",
+          "sha256": "e4e0555885ba150c2eba75df37dcf55884dd34b732a6b33fecb239dbc1077692"
+        },
+        {
+          "representation": "full",
+          "href": "v1/full.json",
+          "sha256": "6174cb086ed03cd41368aa7e33ba93463554da3d10845c39a65da999da7f6002"
+        }
+      ],
+      "logEntrySha256": "1cfd5326b8ff1896ea9013f8597b2d3c8be89f501f3c0980b3c030897f2b2600"
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+/* Gemeinsames Stylesheet für modulpass.ch. Wird von skripte/website.py kopiert. */
+
+:root {
+  --tinte: #1d1d1f;
+  --grau: #6e6e73;
+  --nebel: #f5f5f7;
+  --flaeche: #ffffff;
+  --linie: #d2d2d7;
+  --link: #0066cc;
+  --holz: #c99a62;
+  --nav: rgba(245, 245, 247, 0.8);
+  --schrift: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --breite: 980px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tinte: #f5f5f7;
+    --grau: #a1a1a6;
+    --nebel: #000000;
+    --flaeche: #1d1d1f;
+    --linie: #424245;
+    --link: #2997ff;
+    --nav: rgba(22, 22, 23, 0.8);
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--flaeche);
+  color: var(--tinte);
+  font-family: var(--schrift);
+  font-size: 17px;
+  line-height: 1.47;
+  letter-spacing: -0.022em;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3, p { margin: 0; }
+
+.inhalt { max-width: var(--breite); margin: 0 auto; padding: 0 22px; }
+
+/* Navigation */
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--nav);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--linie);
+}
+.nav .inhalt { display: flex; align-items: center; justify-content: space-between; height: 48px; }
+.marke { color: var(--tinte); font-weight: 600; font-size: 19px; letter-spacing: -0.02em; }
+.marke:hover { text-decoration: none; }
+.nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+.nav ul a { color: var(--tinte); opacity: 0.8; font-size: 12px; letter-spacing: -0.01em; }
+.nav ul a:hover { opacity: 1; text-decoration: none; }
+
+/* Einstieg */
+.einstieg { text-align: center; padding: 72px 0 24px; background: var(--nebel); overflow: hidden; }
+.einstieg h1 {
+  font-size: clamp(56px, 11vw, 96px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+.einstieg .unterzeile {
+  margin-top: 10px;
+  font-size: clamp(24px, 3.6vw, 32px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.einstieg .text {
+  max-width: 600px;
+  margin: 20px auto 0;
+  color: var(--grau);
+  font-size: 19px;
+  line-height: 1.42;
+}
+.einstieg .links { margin-top: 22px; font-size: 19px; display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
+.modul { display: block; width: min(640px, 92vw); height: auto; margin: 28px auto 0; }
+
+/* Abschnitte */
+.abschnitt { padding: 110px 0; }
+.abschnitt.grau { background: var(--nebel); }
+.kopf { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+.kopf h2 {
+  font-size: clamp(36px, 5.6vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.07;
+}
+.kopf p { margin-top: 18px; color: var(--grau); font-size: 21px; line-height: 1.38; }
+
+.kachel { background: var(--nebel); border-radius: 28px; padding: 48px; }
+.grau .kachel { background: var(--flaeche); }
+.kachel h3 { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.14; }
+.kachel p { margin-top: 12px; color: var(--grau); font-size: 17px; }
+.raster { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+
+/* Lebenslauf eines Moduls */
+.kennung { text-align: center; }
+.kennung .wert {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: clamp(17px, 2.6vw, 24px);
+  letter-spacing: 0;
+  color: var(--tinte);
+}
+.kennung .wert span { color: var(--grau); }
+.kennung small { display: block; color: var(--grau); font-size: 14px; }
+.klammer {
+  height: 18px; margin: 18px 10% 0;
+  border: 2px solid var(--holz); border-bottom: 0; border-radius: 12px 12px 0 0;
+}
+.verlauf {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  list-style: none; margin: 0; padding: 0; position: relative;
+}
+.verlauf::before {
+  content: ""; position: absolute; left: 10%; right: 10%; top: 9px; height: 2px; background: var(--holz);
+}
+.verlauf li { position: relative; text-align: center; padding-top: 34px; }
+.verlauf li::before {
+  content: ""; position: absolute; top: 0; left: 50%; width: 20px; height: 20px; margin-left: -10px;
+  border-radius: 50%; background: var(--flaeche); border: 2px solid var(--holz);
+}
+.verlauf li:last-child::before { background: var(--holz); }
+.verlauf strong { display: block; font-weight: 600; font-size: 17px; }
+.verlauf span { display: block; color: var(--grau); font-size: 14px; }
+
+/* Normen */
+.normen {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px 28px;
+  list-style: none; margin: 0; padding: 0;
+}
+.normen li { border-top: 1px solid var(--linie); padding-top: 16px; }
+.normen strong { display: block; font-size: 21px; font-weight: 600; letter-spacing: -0.02em; }
+.normen span { display: block; margin-top: 4px; color: var(--grau); font-size: 15px; line-height: 1.4; }
+
+/* Stand */
+.stand { text-align: center; max-width: 680px; margin: 0 auto; }
+.stand h2 { font-size: clamp(36px, 5.6vw, 56px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.07; }
+.stand p { margin-top: 18px; color: var(--grau); font-size: 21px; line-height: 1.38; }
+
+/* Beispiel-Generator */
+.generator { display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: center; }
+.qr { display: block; width: 100%; height: auto; }
+.qr-hinweis { margin-top: 12px; color: var(--grau); font-size: 13px; line-height: 1.4; text-align: center; }
+.beschriftung { color: var(--grau); font-size: 14px; }
+.link {
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: clamp(18px, 2.7vw, 28px);
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+.link span { display: inline-block; }
+.link .fest { color: var(--grau); }
+#zeichen { font-weight: 600; color: var(--tinte); }
+.knopf {
+  margin-top: 26px;
+  font: inherit; font-size: 17px; font-weight: 400; letter-spacing: -0.022em;
+  color: #fff; background: #0071e3;
+  border: 0; border-radius: 980px; padding: 11px 22px; cursor: pointer;
+}
+.knopf:hover { background: #0077ed; }
+.knopf:active { background: #006edb; }
+.vermerk { margin-top: 14px; color: var(--grau); font-size: 14px; }
+.teile {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+  margin: 44px 0 0; padding: 32px 0 0; border-top: 1px solid var(--linie);
+}
+.teile dt { font-family: var(--mono); font-size: 15px; letter-spacing: 0; word-break: break-all; }
+.teile dd { margin: 8px 0 0; color: var(--grau); font-size: 15px; line-height: 1.45; }
+
+/* Fuss */
+.fuss { padding: 28px 0 40px; color: var(--grau); font-size: 12px; line-height: 1.5; border-top: 1px solid var(--linie); }
+.fuss p + p { margin-top: 6px; }
+
+/* Ein Moment beim Laden */
+@media (prefers-reduced-motion: no-preference) {
+  .einstieg h1, .einstieg .unterzeile, .einstieg .text, .einstieg .links { animation: auf 0.9s cubic-bezier(.2,.7,.2,1) both; }
+  .einstieg .unterzeile { animation-delay: 0.08s; }
+  .einstieg .text, .einstieg .links { animation-delay: 0.16s; }
+  .modul { animation: auf 1.2s cubic-bezier(.2,.7,.2,1) 0.25s both; }
+  @keyframes auf { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+}
+
+/* Schmale Bildschirme */
+@media (max-width: 734px) {
+  .inhalt { padding: 0 16px; }
+  .nav ul { gap: 16px; }
+  .einstieg { padding-top: 48px; }
+  .abschnitt { padding: 72px 0; }
+  .kopf { margin-bottom: 36px; }
+  .kopf p, .stand p { font-size: 19px; }
+  .kachel { padding: 32px 24px; border-radius: 22px; }
+  .raster { grid-template-columns: 1fr; }
+  .normen { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+  .klammer { display: none; }
+  .generator { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+  .generator figure { max-width: 260px; margin: 0 auto; }
+  .teile { grid-template-columns: 1fr; gap: 22px; margin-top: 32px; padding-top: 24px; }
+  .verlauf { grid-template-columns: 1fr; gap: 22px; margin-top: 28px; }
+  .verlauf::before { left: 9px; right: auto; top: 10px; bottom: 10px; width: 2px; height: auto; }
+  .verlauf li { text-align: left; padding: 0 0 0 40px; }
+  .verlauf li::before { left: 0; margin-left: 0; }
+}
+@media (max-width: 380px) {
+  .marke { font-size: 17px; }
+  .nav ul { gap: 11px; }
+}
+
+/* ---------------------------------------------------------------- Passansicht */
+
+.passkopf { background: var(--nebel); padding: 64px 0 56px; text-align: center; }
+.passkopf h1 { font-size: clamp(40px, 7vw, 64px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+.passkopf .unterzeile { margin-top: 10px; color: var(--grau); font-size: 21px; }
+.marken { margin-bottom: 18px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.marke-test {
+  display: inline-block; padding: 5px 14px; border-radius: 980px;
+  background: #fff3d6; color: #6b4a00; font-size: 14px; font-weight: 600;
+}
+.marke-alt {
+  display: inline-block; padding: 5px 14px; border-radius: 980px;
+  background: var(--flaeche); color: var(--tinte); font-size: 14px;
+}
+@media (prefers-color-scheme: dark) {
+  .marke-test { background: #3d2f0a; color: #ffd98a; }
+}
+.kopfdaten {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px 28px;
+  max-width: 860px; margin: 40px auto 0; padding: 0; text-align: left;
+}
+.kopfdaten > div { grid-column: span 2; }
+.kopfdaten > div.breit { grid-column: span 3; }
+.kopfdaten div { border-top: 1px solid var(--linie); padding-top: 12px; }
+.kopfdaten dt { color: var(--grau); font-size: 13px; }
+.kopfdaten dd { margin: 4px 0 0; font-size: 15px; overflow-wrap: anywhere; }
+
+.block { max-width: 860px; margin: 0 auto; }
+.block + .block { margin-top: 56px; }
+.block > h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; }
+.block > p.erklaerung { margin-top: 10px; color: var(--grau); }
+.angaben { margin-top: 24px; }
+.angaben h3 { margin-top: 28px; font-size: 19px; font-weight: 600; letter-spacing: -0.02em; }
+.zeile {
+  display: grid; grid-template-columns: minmax(180px, 1fr) 2fr; gap: 6px 28px;
+  padding: 14px 0; border-bottom: 1px solid var(--linie);
+}
+.zeile .name { font-weight: 600; }
+.zeile .name small { display: block; margin-top: 2px; color: var(--grau); font-weight: 400; font-size: 13px; }
+.zeile .wert { overflow-wrap: anywhere; }
+.zeile .wert ul { list-style: none; margin: 0; padding: 0; }
+.zeile .wert li + li { margin-top: 6px; }
+.zeile .wert .sprache { color: var(--grau); font-size: 13px; margin-left: 6px; }
+.mono { font-family: var(--mono); letter-spacing: 0; font-size: 0.9em; }
+
+.versionen { list-style: none; margin: 24px 0 0; padding: 0; }
+.versionen li { padding: 16px 0; border-bottom: 1px solid var(--linie); }
+.versionen .titel { font-weight: 600; }
+.versionen .titel span { color: var(--grau); font-weight: 400; }
+.versionen .detail { margin-top: 4px; color: var(--grau); font-size: 15px; }
+.versionen .links { margin-top: 6px; display: flex; gap: 18px; flex-wrap: wrap; font-size: 15px; }
+.pruefsumme { color: var(--grau); font-size: 13px; }
+
+.dateien { list-style: none; margin: 24px 0 0; padding: 0; }
+.dateien li { padding: 14px 0; border-bottom: 1px solid var(--linie); }
+.dateien .pruefsumme { display: block; margin-top: 4px; overflow-wrap: anywhere; }
+
+.leer { text-align: center; padding: 120px 0; }
+.leer h1 { font-size: clamp(40px, 7vw, 64px); font-weight: 700; letter-spacing: -0.03em; }
+.leer p { margin-top: 16px; color: var(--grau); font-size: 19px; }
+
+@media (max-width: 734px) {
+  .passkopf { padding: 44px 0 40px; }
+  .kopfdaten { grid-template-columns: 1fr 1fr; }
+  .kopfdaten > div, .kopfdaten > div.breit { grid-column: span 1; }
+  .zeile { grid-template-columns: 1fr; }
+  .block > h2 { font-size: 28px; }
+}
+
+/* Im dunklen Modus ist Blau gegenüber dem hellen Text zu schwach. Links im Text sind deshalb unterstrichen (WCAG 1.4.1). */
+@media (prefers-color-scheme: dark) {
+  main a { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+}

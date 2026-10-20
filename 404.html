@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seite nicht gefunden | Modulpass</title>
+<meta name="description" content="Seite nicht gefunden">
+<meta name="color-scheme" content="light dark">
+<base href="/">
+<script>
+  (function () {
+    var t = location.pathname.split("/");
+    if (location.hostname.endsWith("github.io") && t.length > 2) document.querySelector("base").href = "/" + t[1] + "/";
+  })();
+</script>
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="inhalt">
+    <a class="marke" href="./">Modulpass</a>
+    <ul>
+      <li><a href="./#projekt">Projekt</a></li>
+      <li><a href="./#kennung">Kennung</a></li>
+      <li><a href="def/">Definitionen</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+
+  <section class="leer">
+    <div class="inhalt">
+      <h1>Diese Seite gibt es nicht.</h1>
+      <p>Zu dieser Adresse ist kein Pass veröffentlicht. Beispielkennungen von der Startseite führen immer hierher, weil sie nicht vergeben sind.</p>
+      <p><a href="./">Zur Startseite</a></p>
+    </div>
+  </section>
+</main>
+<footer class="fuss">
+  <div class="inhalt">
+    <p>Copyright © 2026 Samuel Züger</p>
+    <p>Diese Seite setzt keine Cookies und lädt nichts von fremden Servern.</p>
+  </div>
+</footer>
+</body>
+</html>

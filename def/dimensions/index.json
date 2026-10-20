@@ -1,0 +1,19 @@
+{
+  "definition": "dimensions",
+  "dictionaryReference": "https://modulpass.ch/def/dimensions",
+  "objectType": "DataElementCollection",
+  "elements": [
+    "length",
+    "width",
+    "height"
+  ],
+  "accessLevel": "public",
+  "names": {
+    "de": "Abmessungen",
+    "fr": "Dimensions",
+    "en": "Dimensions"
+  },
+  "description": {
+    "de": "Äussere Abmessungen des Objekts."
+  }
+}

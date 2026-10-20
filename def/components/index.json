@@ -1,0 +1,19 @@
+{
+  "definition": "components",
+  "dictionaryReference": "https://modulpass.ch/def/components",
+  "objectType": "MultiValuedDataElement",
+  "valueDataType": "xsd:anyURI",
+  "elements": [
+    "component"
+  ],
+  "accessLevel": "public",
+  "names": {
+    "de": "Bestandteile",
+    "fr": "Composants",
+    "en": "Components"
+  },
+  "description": {
+    "de": "Verweise auf die Pässe der Bestandteile."
+  },
+  "ifc": "IfcRelAggregates"
+}
