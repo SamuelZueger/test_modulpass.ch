@@ -196,14 +196,15 @@ var qrcode=function(){var t=function(t,r){var e=t,n=g[r],o=null,i=0,a=null,u=[],
     return text;
   }
 
-  // QR-Code mit Rahmen und Dreieck nach IEC 61406-1, 2D-10:
-  // Ruhezone 4 Module, Rahmen 1 Modul breit, Dreieck mit Schenkeln von 6 Modulen
+  // QR-Code mit Rahmen und Dreieck nach IEC 61406-1, 2D-10, gleich wie skripte/etiketten.py (E007):
+  // Abstand oben und links 4 Module, unten und rechts 7, damit das Dreieck die Ruhezone
+  // nicht berührt (Anhang C.4). Rahmen 1 Modul breit, Dreieck mit Schenkeln von 6 Modulen.
   function zeichneQr(text) {
     var code = qrcode(0, "Q");  // Fehlerkorrektur Q, empfohlen nach 2D-6
     code.addData(text, "Byte");
     code.make();
-    var n = code.getModuleCount(), rand = 2, abstand = 4;
-    var innen = rand + 1 + abstand, w = n + 2 * (abstand + 1), gesamt = w + 2 * rand;
+    var n = code.getModuleCount(), rand = 2, abstand = 4, abstandDreieck = 7;
+    var innen = rand + 1 + abstand, w = 1 + abstand + n + abstandDreieck + 1, gesamt = w + 2 * rand;
     var d = "";
     for (var r = 0; r < n; r++) {
       for (var c = 0; c < n; c++) {
