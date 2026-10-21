@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+  <info>
+    <title>Modulpass: Verknüpfung von IFC-Modell und digitalem Produktpass</title>
+    <copyright>Samuel Züger</copyright>
+    <version>1.0</version>
+    <description>Holzbaumodule und ihre Bestandteile tragen Kennung und Identifikations-Link ihres Passes. Festlegungen in Entscheid E008 des Repositorys Modulpass.</description>
+    <date>2026-10-21</date>
+    <purpose>Prüfung, ob jedes Holzbaumodul im Modell zu seinem Pass führt</purpose>
+  </info>
+  <specifications>
+    <specification name="Holzbaumodul trägt den Identifikations-Link" ifcVersion="IFC4 IFC4X3_ADD2" identifier="MP-01" description="Ein Holzbaumodul ist ein IfcElementAssembly mit PredefinedType USERDEFINED und ObjectType Holzbaumodul. Es trägt seine Kennung als SerialNumber und den Identifikations-Link als BarCode." instructions="Kennung aus dem Kennungsregister, Identifikations-Link wie im QR-Code am Modul">
+      <applicability minOccurs="0" maxOccurs="unbounded">
+        <entity>
+          <name>
+            <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
+          </name>
+          <predefinedType>
+            <simpleValue>Holzbaumodul</simpleValue>
+          </predefinedType>
+        </entity>
+      </applicability>
+      <requirements>
+        <property dataType="IFCIDENTIFIER">
+          <propertySet>
+            <simpleValue>Pset_ManufacturerOccurrence</simpleValue>
+          </propertySet>
+          <baseName>
+            <simpleValue>SerialNumber</simpleValue>
+          </baseName>
+          <value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9a-hjkmnp-tv-z]{10}"/>
+            </xs:restriction>
+          </value>
+        </property>
+        <property dataType="IFCIDENTIFIER">
+          <propertySet>
+            <simpleValue>Pset_ManufacturerOccurrence</simpleValue>
+          </propertySet>
+          <baseName>
+            <simpleValue>BarCode</simpleValue>
+          </baseName>
+          <value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="https://modulpass\.ch/id/[0-9a-hjkmnp-tv-z]{10}"/>
+            </xs:restriction>
+          </value>
+        </property>
+      </requirements>
+    </specification>
+    <specification name="Bestandteile eines Holzbaumoduls tragen den Identifikations-Link" ifcVersion="IFC4 IFC4X3_ADD2" identifier="MP-02" description="Jedes Element, das über IfcRelAggregates zu einem Holzbaumodul gehört, trägt seine eigene Kennung und seinen Identifikations-Link." instructions="Kennung aus dem Kennungsregister">
+      <applicability minOccurs="0" maxOccurs="unbounded">
+        <partOf relation="IFCRELAGGREGATES">
+          <entity>
+            <name>
+              <simpleValue>IFCELEMENTASSEMBLY</simpleValue>
+            </name>
+            <predefinedType>
+              <simpleValue>Holzbaumodul</simpleValue>
+            </predefinedType>
+          </entity>
+        </partOf>
+      </applicability>
+      <requirements>
+        <property dataType="IFCIDENTIFIER">
+          <propertySet>
+            <simpleValue>Pset_ManufacturerOccurrence</simpleValue>
+          </propertySet>
+          <baseName>
+            <simpleValue>SerialNumber</simpleValue>
+          </baseName>
+          <value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[0-9a-hjkmnp-tv-z]{10}"/>
+            </xs:restriction>
+          </value>
+        </property>
+        <property dataType="IFCIDENTIFIER">
+          <propertySet>
+            <simpleValue>Pset_ManufacturerOccurrence</simpleValue>
+          </propertySet>
+          <baseName>
+            <simpleValue>BarCode</simpleValue>
+          </baseName>
+          <value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="https://modulpass\.ch/id/[0-9a-hjkmnp-tv-z]{10}"/>
+            </xs:restriction>
+          </value>
+        </property>
+      </requirements>
+    </specification>
+  </specifications>
+</ids>
