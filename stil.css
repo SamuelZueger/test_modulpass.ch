@@ -150,6 +150,7 @@ h1, h2, h3, p { margin: 0; }
 
 /* Beispiel-Generator */
 .generator { display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: center; }
+.generator figure { margin: 0; }
 .qr { display: block; width: 100%; height: auto; }
 .qr-hinweis { margin-top: 12px; color: var(--grau); font-size: 13px; line-height: 1.4; text-align: center; }
 .beschriftung { color: var(--grau); font-size: 14px; }
