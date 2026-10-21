@@ -274,6 +274,8 @@ h1, h2, h3, p { margin: 0; }
 .dateien li { padding: 14px 0; border-bottom: 1px solid var(--linie); }
 .dateien .pruefsumme { display: block; margin-top: 4px; overflow-wrap: anywhere; }
 
+.etikett { display: block; width: 100%; max-width: 440px; height: auto; margin-top: 24px; border: 1px solid var(--linie); border-radius: 8px; background: #fff; }
+
 .leer { text-align: center; padding: 120px 0; }
 .leer h1 { font-size: clamp(40px, 7vw, 64px); font-weight: 700; letter-spacing: -0.03em; }
 .leer p { margin-top: 16px; color: var(--grau); font-size: 19px; }
